@@ -26,23 +26,57 @@
 // versione while
 
 // rifaccio la struttura della versione precedente usando il ciclo while invece del for
-var output;
+// var output;
 
 // inizializzo il mio contatore a 1 (perchè voglio iniziare a contare da 1 e non da 0)
+// var i = 1;
+//
+// while (i <= 100) {
+//   // stessa logica di prima
+//   if ((i % 3 == 0) && (i % 5 == 0)) {
+//       // aggiungo all'output una classe per poter poi richiamare in css gli elementi inseriti dinamicamente
+//       output = "<li class='fzbz'>FizzBuzz</li>";
+//     } else if (i % 3 == 0) {
+//       output = "<li class='fizz'>Fizz</li>";
+//     } else if (i % 5 == 0) {
+//       output = "<li class='buzz'>Buzz</li>";
+//     } else {
+//       output = "<li>" + i + "</li>";
+//     }
+//     // visualizzo l'output in pagina
+//     document.getElementById('testo').innerHTML += output;
+//
+//     console.log(output);
+//     // incremento il contatore per evitare di creare un loop infinito
+//     i++;
+// }
+
+
+
+// logica alternativa
+var output;
+
+// creo il solito ciclo
 var i = 1;
 
 while (i <= 100) {
-  // stessa logica di prima
-  if ((i % 3 == 0) && (i % 5 == 0)) {
-      // aggiungo all'output una classe per poter poi richiamare in css gli elementi inseriti dinamicamente
+  // setto l'output "di default" al solo numero (valore di i)
+  output = "<li>" + i + "</li>";
+  // controllo se i è divisibile per 3
+  if (i % 3 == 0) {
+    // se è divisibile per 3 controllo se è anche divisibile per 5 e cambio l'output di conseguenza
+    if (i % 5 == 0) {
       output = "<li class='fzbz'>FizzBuzz</li>";
-    } else if (i % 3 == 0) {
-      output = "<li class='fizz'>Fizz</li>";
-    } else if (i % 5 == 0) {
-      output = "<li class='buzz'>Buzz</li>";
     } else {
-      output = "<li>" + i + "</li>";
+      // se è divisibile per 3 ma non per 5 setto l'output a "Fizz"
+      output = "<li class='fizz'>Fizz</li>";
     }
+  } else if (i % 5 == 0) {
+    // se non è divisibile per 3 controllo se è divisibile per 5 e cambio l'output di conseguenza
+    output = "<li class='buzz'>Buzz</li>"
+  }
+  // se i non è divisibile ne per 3 ne per 5, l'output rimarrà quello settato inizialmente, quindi il valore di i
+
     // visualizzo l'output in pagina
     document.getElementById('testo').innerHTML += output;
 
