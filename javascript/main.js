@@ -8,7 +8,7 @@ var output;
 // creo un ciclo for per stampare i numeri da 1 a 100
 
 for (var i = 1; i <= 100; i++) {
-  // all'interno del ciclo for controllo, usando il modulo, se il numero attuale sia dvisie per 3, per 5 o per entrambi e stampo un messaggio diverso di conseguenza
+  // all'interno del ciclo for controllo, usando il modulo, se il numero attuale sia divisibile per 3, per 5 o per entrambi e stampo un messaggio diverso di conseguenza
   // controllo prima se sia divisibile per entrambi altrimenti questa condizione non verrebbe mai controllata
   // uso una variabile di appoggio, "output", per modificare dinamicamente l'output ad ogni ciclo
   if ((i % 3 == 0) && (i % 5 == 0)) {
