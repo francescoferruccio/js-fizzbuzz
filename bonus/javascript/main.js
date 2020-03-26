@@ -26,7 +26,7 @@
 // versione while
 
 // rifaccio la struttura della versione precedente usando il ciclo while invece del for
-var output;
+var output, msg;
 
 // inizializzo il mio contatore a 1 (perchè voglio iniziare a contare da 1 e non da 0)
 var i = 1;
@@ -34,14 +34,17 @@ var i = 1;
 while (i <= 100) {
   // stessa logica di prima
   if ((i % 3 == 0) && (i % 5 == 0)) {
-      output = "FizzBuzz";
+      output = "<li class='fzbz'>FizzBuzz</li>";
     } else if (i % 3 == 0) {
-      output = "Fizz";
+      output = "<li class='fizz'>Fizz</li>";
     } else if (i % 5 == 0) {
-      output = "Buzz";
+      output = "<li class='buzz'>Buzz</li>";
     } else {
-      output = i;
+      output = "<li>" + i + "</li>";
     }
+    // visualizzo l'output in pagina
+    document.getElementById('testo').innerHTML += output;
+
     console.log(output);
     // incremento il contatore per evitare di creare un loop infinito
     i++;
