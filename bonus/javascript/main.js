@@ -34,6 +34,7 @@ var i = 1;
 while (i <= 100) {
   // stessa logica di prima
   if ((i % 3 == 0) && (i % 5 == 0)) {
+      // aggiungo all'output una classe per poter poi richiamare in css gli elementi inseriti dinamicamente
       output = "<li class='fzbz'>FizzBuzz</li>";
     } else if (i % 3 == 0) {
       output = "<li class='fizz'>Fizz</li>";
