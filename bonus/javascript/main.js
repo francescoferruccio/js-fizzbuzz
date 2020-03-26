@@ -26,7 +26,7 @@
 // versione while
 
 // rifaccio la struttura della versione precedente usando il ciclo while invece del for
-var output, msg;
+var output;
 
 // inizializzo il mio contatore a 1 (perchè voglio iniziare a contare da 1 e non da 0)
 var i = 1;
